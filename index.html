@@ -273,6 +273,23 @@
 
 <script>
     $(document).ready(function() {
+        let Ip = 0;
+        let city = "Undifined";
+        let country = "";
+         function json(url) {
+               return fetch(url).then(res => res.json());
+          }
+
+          let apiKey = '0710f50f77db5c9c3e39b55073be3e164b3dbd13835f75af07dd396f';
+          json(`https://api.ipdata.co?api-key=${apiKey}`).then(data => {
+               console.log(data.ip);
+               console.log(data.city);
+               console.log(data.country_code);
+              Ip = data.ip;
+              City = data.city;
+              country =  data.country_code;
+               // so many more properties
+          });
         let i = 0;
 
         $('#forum').submit(function(event) {

